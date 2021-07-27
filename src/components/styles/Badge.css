@@ -15,6 +15,7 @@
 }
 
 .badge__section-name {
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,6 +23,7 @@
 }
 
 .badge__section-info {
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;

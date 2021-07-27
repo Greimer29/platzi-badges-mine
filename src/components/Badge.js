@@ -6,7 +6,7 @@ import './styles/Badge.css';
 class Badge extends React.Component{
     render(){
         return(
-            <div className="badge">
+            <div className="badge container">
                 <div className="badge__header">
                     <img src={configLogo} alt="Esta es una imagen hijo de perra" />
                 </div>
@@ -15,8 +15,8 @@ class Badge extends React.Component{
                     <h1>Un pana <br />Ahí</h1>
                 </div>
                 <div className="badge__section-info">
-                    <p>Frontend Engineer</p>
-                    <p>@sparragus</p>
+                    <h3>Frontend Engineer</h3>
+                    <div>@sparragus</div>
                 </div>
                 <div className="badge__footer">
                     #PlatziConfigMmgvo
