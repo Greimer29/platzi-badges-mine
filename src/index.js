@@ -7,7 +7,14 @@ import './global.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Badge />
+    <Badge 
+      firtsName="Marcelino"
+      lastName="Angostura"
+      avatarImage="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?d=identicon"
+      ocupation="Central"
+      twitter="contumacho"
+
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
