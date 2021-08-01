@@ -6,7 +6,7 @@ import './styles/Badge.css';
 class Badge extends React.Component{
     render(){
         return(
-            <div className="badge container md-5">
+            <div className="badge container">
                 <div className="badge__header">
                     <img src={configLogo} alt="header_image" />
                 </div>
