@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './styles/BadgeNew.css';
 // import Badge from '../components/Badge';
 import Navbar from '../components/Navbar';
 // import header from '../images/badge-header-svg';
