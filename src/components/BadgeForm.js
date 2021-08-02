@@ -1,17 +1,6 @@
 import React from 'react';
 
 class BadgeForm extends React.Component {
-    state = {
-        firtsName:"",
-        lastName:"",
-        ocupation:"",
-        twitter:""
-    };
-    handleChange = e =>{
-        this.setState({
-            [e.target.name]:e.target.value
-        })
-    }
     handleClick(e){
         console.log('Botón clickeado');
     }
@@ -28,19 +17,46 @@ class BadgeForm extends React.Component {
                 <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <label>Firts Name</label>
-                        <input onChange={this.handleChange} className="form-control" name="firtsName" type="text" value={this.state.firtsName}/>
+                        <input onChange={this.props.onChange} 
+                            className="form-control" 
+                            name="firtsName" 
+                            type="text" 
+                            value={this.props.firtsName}
+                        />
                     </div>
                     <div className="form-group">
                         <label>Last Name</label>
-                        <input onChange={this.handleChange} className="form-control" name="lastName" type="text" value={this.state.lastName}/>
+                        <input onChange={this.props.onChange} 
+                            className="form-control" 
+                            name="lastName" 
+                            type="text" 
+                            value={this.props.lastName}
+                        />
                     </div>
                     <div className="form-group">
                         <label>Jobtitle</label>
-                        <input onChange={this.handleChange} className="form-control" name="ocupation" type="text" value={this.state.ocupation}/>
+                        <input onChange={this.props.onChange} 
+                            className="form-control" 
+                            name="ocupation" 
+                            type="text" 
+                            value={this.props.ocupation}
+                        />
                     </div>
                     <div className="form-group">
                         <label>Twitter</label>
-                        <input onChange={this.handleChange} className="form-control" name="twitter" type="email" value={this.state.twitter}/>
+                        <input onChange={this.props.onChange} 
+                            className="form-control" 
+                            name="twitter" type="text" 
+                            value={this.props.twitter}
+                        />
+                    </div>
+                    <div className="form-group">
+                        <label>Email</label>
+                        <input onChange={this.props.onChange} 
+                            className="form-control" 
+                            name="email" type="email" 
+                            value={this.props.email}
+                        />
                     </div>
                     <button onClick={this.handleClick} className="btn btn-primary my-2">
                         Save
