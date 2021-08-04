@@ -1,13 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Badges from './pages/Badges';
-
+import App from './components/App';
 import 'bootstrap/dist/css/bootstrap.css';
 import './global.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Badges/>
+    <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
