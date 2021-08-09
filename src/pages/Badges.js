@@ -4,6 +4,8 @@ import confLogo from '../images/badge-header.svg';
 import BadgeList from '../components/BadgeList';
 import {Link} from 'react-router-dom';
 import api from '../api';
+import LoadingPage from '../components/LoadingPage';
+import ErrorPage from '../components/ErrorPage';
 
 class Badges extends React.Component {
     state={
@@ -36,15 +38,6 @@ class Badges extends React.Component {
         }
     }
 
-    componentDidUpdate(propsUlt,stateUlt){
-        console.log({
-            propsUlt:propsUlt, stateUlt:stateUlt
-        })
-        console.log({
-            props:this.props,state:this.state
-        })
-    }
-
     componentWillUnmount(){
         console.log('6')
         clearTimeout(this.timeId)
@@ -52,14 +45,10 @@ class Badges extends React.Component {
 
     render(){
         if(this.state.loading === true){
-            return 'Loading...'
+            return <LoadingPage/>
         }
         if(this.state.error){
-            return(
-                <h3>Something goes wrong <br />
-                    {`Error: ${this.state.error.message}`}
-                </h3>
-            )
+            return <ErrorPage error={this.state.error}/>
         }
         console.log('2. Render')
         return(
