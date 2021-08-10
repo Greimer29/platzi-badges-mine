@@ -8,7 +8,6 @@ class BadgeForm extends React.Component {
     render() {
         return ( 
             <div>
-                <h1> New Atendant </h1> 
                 <form onSubmit={ this.props.onSubmit}>
                     <div className="form-group">
                         <label> Firts Name </label> 
@@ -16,7 +15,7 @@ class BadgeForm extends React.Component {
                             className = "form-control"
                             name = "firstName"
                             type = "text"
-                            value = { this.props.firstName }
+                            value = { this.props.formValue.firstName }
                         /> 
                     </div> 
                     <div className="form-group">
@@ -25,7 +24,7 @@ class BadgeForm extends React.Component {
                             className = "form-control"
                             name = "lastName"
                             type = "text"
-                            value = { this.props.lastName }
+                            value = { this.props.formValue.lastName }
                         /> 
                     </div> 
                     <div className="form-group">
@@ -34,7 +33,7 @@ class BadgeForm extends React.Component {
                             className = "form-control"
                             name = "jobTitle"
                             type = "text"
-                            value = { this.props.jobTitle }
+                            value = { this.props.formValue.jobTitle }
                         /> 
                     </div> 
                     <div className = "form-group" >
@@ -43,7 +42,7 @@ class BadgeForm extends React.Component {
                             className = "form-control"
                             name = "twitter"
                             type = "text"
-                            value = { this.props.twitter }
+                            value = { this.props.formValue.twitter }
                         /> 
                     </div> 
                     <div className = "form-group" >
@@ -52,7 +51,7 @@ class BadgeForm extends React.Component {
                             className = "form-control"
                             name = "email"
                             type = "email"
-                            value = { this.props.email }
+                            value = { this.props.formValue.email }
                         /> 
                     </div> 
                     <button onClick = { this.handleClick }
