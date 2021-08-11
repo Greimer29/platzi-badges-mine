@@ -48,10 +48,18 @@
     {
       "firstName": "Abel",
       "lastName": "Guzmán",
-      "jobTitle": "Backend Engineer",
+      "jobTitle": "Full Stack Developer",
       "twitter": "Greimer29",
       "email": "greimerabelguzman29@gmail.com",
       "id": "1B4-bFL"
+    },
+    {
+      "firstName": "Grima",
+      "lastName": "Kmon",
+      "jobTitle": "Frontend Engineer",
+      "twitter": "Greimer29",
+      "email": "greimerabelguzman29@gmail.com",
+      "id": "uX4lixG"
     }
   ]
 }

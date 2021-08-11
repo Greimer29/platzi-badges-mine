@@ -17,8 +17,8 @@ class BadgeList extends React.Component {
             <ul className="list-unstyled">
                 {this.props.badges.map(badge => {
                     return(
-                        <li key={badge.id} className="list__container">
-                            <Link className="text-reset d-flex text-decoration-none" to={`/badges/${badge.id}/edit`}>
+                        <Link className="text-reset  text-decoration-none list__container" to={`/badges/${badge.id}`}>
+                        <li key={badge.id} className="d-flex">
                                 <div className="image__container">
                                     <Gravatar className="avatar__image" email={badge.email} alt="Imagen" />
                                 </div>
@@ -27,8 +27,8 @@ class BadgeList extends React.Component {
                                     <div> {badge.twitter} </div>
                                     <div>{badge.jobTitle}</div>
                                 </div>
-                            </Link>
                         </li>
+                            </Link>
                     )
                 })}
             </ul>
