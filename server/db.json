@@ -46,20 +46,12 @@
       "avatarUrl": "https://www.gravatar.com/avatar/da1e5fb3d31eb063fac247787609c746?d=identicon"
     },
     {
-      "firstName": "Abel",
-      "lastName": "Guzmán",
+      "firstName": "Greimer",
+      "lastName": "Pérez",
       "jobTitle": "Full Stack Developer",
       "twitter": "Greimer29",
       "email": "greimerabelguzman29@gmail.com",
       "id": "1B4-bFL"
-    },
-    {
-      "firstName": "Grima",
-      "lastName": "Kmon",
-      "jobTitle": "Frontend Engineer",
-      "twitter": "Greimer29",
-      "email": "greimerabelguzman29@gmail.com",
-      "id": "uX4lixG"
     }
   ]
 }
