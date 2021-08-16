@@ -3,11 +3,29 @@ import './styles/BadgeList.css';
 import {Link} from 'react-router-dom';
 import Gravatar from './Gravatar';
 
-class BadgeList extends React.Component {
-    render() {
-        if(this.props.badges.length === 0){
+function BadgeList(props) {
+    const [query,setQuery] = React.useState('');
+    const filteredBadeges = props.badges.filter(badge =>{
+        return (
+            `${badge.firstName}${badge.lastName}`   
+                .toLowerCase()     
+                .includes(query.toLocaleLowerCase())
+        )
+    })
+
+        if(filteredBadeges.length === 0){
             return(
-                <div>
+                <div className="">
+                    <div className="form-group my-3">
+                        <label>Filter Badges</label>
+                        <input type="text" 
+                            className="form-control" 
+                            value={query}
+                            onChange={(e)=>{
+                                setQuery(e.target.value)
+                            }}
+                        />
+                    </div>
                     <h3>No se encontraron badges</h3>
                     <Link className="btn btn-primary" to="/badges/new">Create New Badge</Link>
                 </div>
@@ -15,7 +33,17 @@ class BadgeList extends React.Component {
         }
         return (
             <ul className="list-unstyled">
-                {this.props.badges.map(badge => {
+                <div className="form-group my-3">
+                    <label>Filter Badges</label>
+                    <input type="text" 
+                        className="form-control" 
+                        value={query}
+                        onChange={(e)=>{
+                            setQuery(e.target.value)
+                        }}
+                    />
+                </div>
+                {filteredBadeges.map(badge => {
                     return(
                         <Link key={badge.id}className="text-reset  text-decoration-none list__container" to={`/badges/${badge.id}`}>
                             <li className="d-flex">
@@ -33,7 +61,6 @@ class BadgeList extends React.Component {
                 })}
             </ul>
         )
-    }
 }
 
 export default BadgeList;
