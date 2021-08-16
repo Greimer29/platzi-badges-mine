@@ -4,16 +4,19 @@ import {Link} from 'react-router-dom';
 import Gravatar from './Gravatar';
 
 function BadgeList(props) {
+    const badges = props.badges;
     const [query,setQuery] = React.useState('');
-    const filteredBadeges = props.badges.filter(badge =>{
-        return (
-            `${badge.firstName}${badge.lastName}`   
-                .toLowerCase()     
-                .includes(query.toLocaleLowerCase())
-        )
-    })
+    const [filteredBadges,setFilteredBadges] = React.useState(badges);
 
-        if(filteredBadeges.length === 0){
+    React.useMemo(()=>{
+        const result = badges.filter(badge => {
+            return `${badge.firstName} ${badge.lastName}`.toLowerCase().includes(query.toLowerCase())
+        })
+        setFilteredBadges(result);
+    },[badges,query]
+    )
+
+        if(filteredBadges.length === 0){
             return(
                 <div className="">
                     <div className="form-group my-3">
@@ -43,7 +46,7 @@ function BadgeList(props) {
                         }}
                     />
                 </div>
-                {filteredBadeges.map(badge => {
+                {filteredBadges.map(badge => {
                     return(
                         <Link key={badge.id}className="text-reset  text-decoration-none list__container" to={`/badges/${badge.id}`}>
                             <li className="d-flex">
